@@ -10,6 +10,5 @@ namespace Places.Controllers
     {
       return View();
     }
-
   }
 }
