@@ -6,11 +6,15 @@
 <p>You haven't been to any places yet.</p>
 }
 <ul>
-  @foreach (Location x in Model)
+  @foreach (Location location in Model)
   {
-    <li>@x.CityName</li>
+    <li><a href="/locations/@location.Id">@location.CityName</li>
   }
 </ul>
 
 <a href="/">Back to home</a>
 <a href="/locations/new">Add another location</a>
+
+<form action="/locations/delete" method="post">
+  <button type="submit" name="button">Clear All Locations</button>
+</form>
